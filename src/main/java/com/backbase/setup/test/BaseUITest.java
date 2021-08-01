@@ -1,7 +1,7 @@
 package com.backbase.setup.test;
 
 import com.backbase.setup.driver.BrowserSetup;
-import com.backbase.setup.page.BasePage;
+import com.backbase.setup.pages.BasePage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.WebDriver;
