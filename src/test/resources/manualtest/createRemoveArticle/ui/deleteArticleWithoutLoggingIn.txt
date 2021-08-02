@@ -1,0 +1,7 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+3. Open Article created by another account
+- check if user is navigated to Article Page
+- check if "Delete Article" button doesn't exist

@@ -1,0 +1,18 @@
+Preconditions:
+-You have access to the application
+-You have existing account
+
+1. Open application
+2. Sign in to application
+3. Click button New Article in navigation menu
+4. Click application logo
+- check if user is navigated to Home Page
+4. Click button New Article in navigation menu
+5. Click Home button
+- check if user is navigated to Home Page
+6. Click button New Article in navigation menu
+7. Click Settings button
+- check if user is navigated to Settings Page
+8. Click button New Article in navigation menu
+9. Click account button
+- check if user is navigated to Account Page

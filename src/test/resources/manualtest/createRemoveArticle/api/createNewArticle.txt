@@ -1,0 +1,7 @@
+Preconditions:
+-You have access to the application api
+-You have token to authorize user
+
+1. Send request to create article with all fields
+-check if system returns correct http code
+-check in response if article data was sent correctly

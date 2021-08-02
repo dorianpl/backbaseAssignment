@@ -1,0 +1,7 @@
+Preconditions:
+-You have access to the application api
+-You have token to authorize user
+
+1. Send request to create user
+-check if system returns correct http code
+-check in response if user data was sent correctly

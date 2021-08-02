@@ -1,0 +1,7 @@
+Preconditions:
+-You have access to the application api
+-Article already exists in database
+
+1. Send request to delete article without token
+-check if system returns correct http code
+-check in response if error info was sent correctly

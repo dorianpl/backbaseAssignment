@@ -1,0 +1,13 @@
+Preconditions:
+-You have access to the application
+-User already exists in database
+
+
+1. Open application
+2. Click button Sign up in navigation menu
+3. Fill username with existing data
+4. Fill email with existing data
+5. Fill password with any data
+6. Click Sign Up button
+- check if page indicates that username is already taken
+- check if page indicates that email is already taken

@@ -1,0 +1,6 @@
+Preconditions:
+-You have access to the application api
+
+1. Send request to create article without token
+-check if system returns correct http code
+-check in response if error info was sent correctly

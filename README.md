@@ -1,5 +1,14 @@
 # backbaseAssignment
 
+1. [Framework dependencies](#framework-dependencies)
+2. [Local Run](#local-run)
+3. [BrowserStack run](#browserstack-run)
+4. [Selenium Grid run](#selenium-grid-run)
+5. [How to run tests with Maven](#how-to-run-tests-with-maven)
+6. [HTML Report](#html-report)
+7. [Test properties](#test-properties)
+8. [Manual tests](#manual-tests)
+
 ## Framework dependencies
 
 | Name   |  Description   |
@@ -10,7 +19,7 @@
 | Selenium | ui testing framework |
 
 
-## LocalRun
+## Local Run
 
 There are three web browser drivers added to project:
 * chrome
@@ -24,7 +33,7 @@ To run tests locally you need to update `src/test/resources/driver.properties` f
 
 Browsers can be chosen between the ones mentioned above. 
 
-## Headless
+### Headless
 
 To run browsers in headless mode set `driver.headless` parameter to `true` in file `src/test/resources/driver.properties`
 
@@ -46,7 +55,7 @@ To run test in Selenium Grid you need to update `src/test/resources/driver.prope
 * driver.platform=<b>grid</b>
 * driver.selenium.grid.url=
 
-Selenium Grid can be e.g. in local with docker usage. 
+Selenium Grid url can point to external instance url or local instance created with e.g. docker. 
 
 ## How to run tests with Maven
 
@@ -79,5 +88,9 @@ generate HTML automatically when com.backbase.tests classes extends `BaseTest`.
 
 ## Test properties
 
-Test properties can be found `src/test/resources/test.properties`. Notice that it contains credentials. In real project, it would be better to store that
+Test properties can be found in `src/test/resources/test.properties`. Notice that it contains credentials. In real project, it would be better to store that
 in some kind of credential manager (e.g. [Secrets Manager Credentials Provider](https://plugins.jenkins.io/aws-secrets-manager-credentials-provider/) in Jenkins)
+
+## Manual tests
+
+Manual tests can be found in `src/test/resources/manualtest`. It contains api and ui tests for create user and create/remove article. 

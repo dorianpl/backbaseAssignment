@@ -25,7 +25,7 @@ public class CreateNewUserAPITest extends BaseAPITest {
     @Test
     @Tag("API")
     @Tag("ALL")
-    @DisplayName("Test new user creation")
+    @DisplayName("Test new user creation and check with profile")
     public void testCreateNewUser() throws IOException {
         Response response = registerUser(createNewRandomUser());
         assertThat(response.getStatusCode())

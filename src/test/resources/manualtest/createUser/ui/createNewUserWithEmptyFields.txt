@@ -1,0 +1,11 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+2. Click button Sign up in navigation menu
+- check if Sign Up button is disabled
+3. Fill username with any data
+- check if Sign Up button is disabled
+4. Fill email with any data
+- check if Sign Up button is disabled
+

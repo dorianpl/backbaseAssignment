@@ -1,0 +1,15 @@
+Preconditions:
+-You have access to the application
+-You have existing account
+
+1. Open application
+2. Sign in to application
+3. Click New Article button
+5. Click Publish Article
+- check if user is navigated to created article
+- check if article contains empty title, body and tags
+- check if article contains author
+6. Click Home button
+- check if user is navigated to Home Page and Your Feeds
+- check if new article contains empty title, body and tags
+- check if article contains author

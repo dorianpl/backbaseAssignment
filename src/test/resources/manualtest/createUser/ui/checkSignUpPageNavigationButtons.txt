@@ -1,0 +1,22 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+2. Click button Sign up in navigation menu
+3. Click application logo
+- check if user is navigated to Home Page
+4. Click button Sign up in navigation menu
+5. Click Home button
+- check if user is navigated to Home Page
+6. Click button Sign up in navigation menu
+7. Click Sign in button
+- check if user is navigated to Sign in Page
+8. Click button Sign up in navigation menu
+9. Click "Have an account?" link
+- check if user is navigated to Sign in Page
+10. Click button Sign up in navigation menu
+11. Click application logo in footer
+- check if user is navigated to Home Page
+10. Click button Sign up in navigation menu
+11. Click "Thinkster" link in footer
+- check if user is navigated to Thinkster Page

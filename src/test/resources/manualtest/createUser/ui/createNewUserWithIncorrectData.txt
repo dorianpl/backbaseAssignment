@@ -1,0 +1,11 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+2. Click button Sign up in navigation menu
+3. Fill username with incorrect data (e.g. "abc-abc")
+4. Fill email with incorrect data (e.g. "abc")
+5. Fill password with any data
+6. Click Sign Up button
+- check if page indicates that username is invalid
+- check if page indicates that email is invalid

@@ -1,0 +1,10 @@
+Preconditions:
+-You have access to the application api
+
+1. Send request to create user with all empty fields
+-check if system returns correct http code
+-check in response if error info was sent correctly
+
+2. Send request to create user with one required empty fields
+-check if system returns correct http code
+-check in response if error info was sent correctly

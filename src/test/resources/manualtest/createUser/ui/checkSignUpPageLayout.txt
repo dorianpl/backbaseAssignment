@@ -1,0 +1,13 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+2. Click button Sign up in navigation menu
+- check if application logo is displayed in top left corner
+- check if navigation menu is in top right corner
+- check if navigation menu contains buttons: Home, Sign n, Sign up with correct order
+- check if "Sign Up" title is in the middle of page
+- check if "Have an account?" link is under page title
+- check if "Username", "Email", "Password" input fields are available
+- check if Sign Up button is under input fields
+- check if footer is on the bottom of the page

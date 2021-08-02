@@ -1,0 +1,12 @@
+Preconditions:
+-You have access to the application
+
+1. Open application
+2. Click button Sign up in navigation menu
+3. Fill username with correct data
+4. Fill email with correct data
+5. Fill password with correct data
+- check if Sign Up button is enabled
+6. Click Sign Up button
+- check if page is redirected to Home Page
+- check if New User is logged in application

@@ -1,0 +1,11 @@
+Preconditions:
+-You have access to the application
+-You have existing account
+-You have Article created by existing account
+
+1. Open application
+2. Sign in to application
+3. Open Article created by currently logged in account
+4. Click "Delete Article" button
+- check if user is navigated to Home Page and Your Feeds
+- check if article doesn't exist

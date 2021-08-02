@@ -1,0 +1,11 @@
+Preconditions:
+-You have access to the application api
+-User already exists in database
+
+1. Send request to create user with the same username as already created user
+-check if system returns correct http code
+-check in response if error info was sent correctly
+
+2. Send request to create user with the same email as already created user
+-check if system returns correct http code
+-check in response if error info was sent correctly
