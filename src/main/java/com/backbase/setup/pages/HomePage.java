@@ -1,7 +1,8 @@
 package com.backbase.setup.pages;
 
-import com.backbase.setup.pages.BasePage;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
@@ -9,4 +10,10 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+    @FindBy(xpath = "//a[(contains(@class, 'nav-link active')) and contains(text(), 'Feed')]")
+    private WebElement activeFeed;
+
+    public String returnActiveFeedType() {
+        return activeFeed.getText();
+    }
 }

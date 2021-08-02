@@ -8,8 +8,8 @@ import com.backbase.utils.PropertiesReader;
 import org.junit.jupiter.api.extension.*;
 
 public class BaseTest implements BeforeAllCallback, BeforeTestExecutionCallback, AfterAllCallback, AfterTestExecutionCallback {
-    static ExtentReports reports;
-    static ExtentTest test;
+    protected static ExtentReports reports;
+    protected static ExtentTest test;
     private PropertiesReader propertiesReader = new PropertiesReader("report.properties");
 
     /**
@@ -35,7 +35,6 @@ public class BaseTest implements BeforeAllCallback, BeforeTestExecutionCallback,
     @Override
     public void beforeTestExecution(ExtensionContext context) throws Exception {
         test = reports.createTest(context.getDisplayName());
-
         test.log(Status.INFO, context.getDisplayName() + " - started");
 
     }
@@ -56,7 +55,7 @@ public class BaseTest implements BeforeAllCallback, BeforeTestExecutionCallback,
     }
 
     /**
-     * Override afterAll to complete report after all tests
+     * Override afterAll to complete report after all com.backbase.tests
      *
      * @param context Extension Report test context
      * @throws Exception

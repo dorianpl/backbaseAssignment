@@ -1,4 +1,4 @@
-package com.backbase.setup.api.models;
+package com.backbase.setup.api.models.profile;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -23,5 +23,5 @@ public class ProfileData {
     private String image;
 
     @JsonProperty("following")
-    private String following;
+    private boolean following;
 }

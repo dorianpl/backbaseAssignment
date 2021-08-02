@@ -7,15 +7,38 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
-    public WebDriver driver;
+    protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//a[contains(text(), 'conduit')]")
+    protected WebElement mainIcon;
+
+    @FindBy(xpath = "//a[contains(text(), 'Sign up')]")
+    protected WebElement signUp;
+
+    @FindBy(xpath = "//a[contains(text(), 'Sign in')]")
+    protected WebElement signIn;
+
+    @FindBy(xpath = "//a[contains(text(), 'Home')]")
+    protected WebElement home;
+
+    @FindBy(xpath = "//a[contains(text(), 'Settings')]")
+    protected WebElement settings;
+
+    @FindBy(xpath = "//a[contains(text(), 'New Article')]")
+    protected WebElement newArticle;
+
+    @FindBy(xpath = "//a[contains(@href, 'profile')]")
+    protected WebElement profile;
+
     public void openMainUrl(String url, String username, String password) {
         openMainUrl(addCredentialsToUrl(url, username, password));
+        //Needed for Firefox. Page needs to be reloaded to load all page objects. Notice that browser refresh doesn't help.
+        openMainUrl(url);
     }
 
     public void openMainUrl(String url) {
@@ -25,23 +48,6 @@ public class BasePage {
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
-
-    private String addCredentialsToUrl(String url, String username, String password) {
-        return url.replace("https://", "https://" + username + ":" + password + "@");
-    }
-
-    @FindBy(xpath = "//a[contains(text(), 'conduit')]")
-    public WebElement mainIcon;
-
-    @FindBy(xpath = "//a[contains(text(), 'Sign up')]")
-    public WebElement signUp;
-
-    @FindBy(xpath = "//a[contains(text(), 'Sign in')]")
-    public WebElement signIn;
-
-    @FindBy(xpath = "//a[contains(text(), 'Home')]")
-    public WebElement home;
-
 
     public SignInPage openSignInPage() {
         signIn.click();
@@ -58,10 +64,29 @@ public class BasePage {
         return new HomePage(driver);
     }
 
+    public EditorPage openNewArticlePage() {
+        newArticle.click();
+        return new EditorPage(driver);
+    }
+
     public HomePage clickMainIcon() {
         mainIcon.click();
         return new HomePage(driver);
     }
 
+    public boolean settingsAreVisible() {
+        return settings.isDisplayed();
+    }
 
+    public boolean newArticleIsVisible() {
+        return newArticle.isDisplayed();
+    }
+
+    public boolean profileNameIsVisible() {
+        return profile.isDisplayed();
+    }
+
+    private String addCredentialsToUrl(String url, String username, String password) {
+        return url.replace("https://", "https://" + username + ":" + password + "@");
+    }
 }
