@@ -20,26 +20,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(BaseTest.class)
 public class AddNewArticleUITest extends BaseUITest {
 
-    private PropertiesReader properties = new PropertiesReader("test.properties");
-    private HomePage homePage;
+
     private final String ARTICLE_TITLE = "Here is article title";
     private final String ARTICLE_DESCRIPTION = "Here is description";
     private final String ARTICLE_BODY = "Here is article body";
     private final String ARTICLE_TAG = "test";
 
-
-    @BeforeEach
-    public void startBrowser() {
-        String url = properties.readProperty("test.mainUrl");
-        String username = properties.readProperty("test.authorisation.username");
-        String password = properties.readProperty("test.authorisation.password");
-        homePage = new HomePage(driver);
-        homePage.openMainUrl(url, username, password);
-    }
-
     @Test
-    @Tag("UI")
-    @Tag("ALL")
+    @Tags({@Tag("UI"), @Tag("ALL")})
     @DisplayName("Test adding new article")
     public void testAddNewArticle() {
         String newUsername = RandomUserNameCreator.generateRandomUserName();

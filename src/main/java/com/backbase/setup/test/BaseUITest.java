@@ -2,10 +2,9 @@ package com.backbase.setup.test;
 
 import com.backbase.setup.driver.BrowserSetup;
 import com.backbase.setup.pages.BasePage;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.TestInstance;
+import com.backbase.setup.pages.HomePage;
+import com.backbase.utils.PropertiesReader;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.html5.WebStorage;
 
@@ -14,11 +13,22 @@ public class BaseUITest extends BaseTest {
 
     protected WebDriver driver;
     protected BasePage basePage;
+    protected HomePage homePage;
+    protected PropertiesReader properties = new PropertiesReader("test.properties");
 
     @BeforeAll
     public void setupDriver() {
         driver = new BrowserSetup().driverSetup();
         basePage = new BasePage(driver);
+    }
+
+    @BeforeEach
+    public void startBrowser() {
+        String url = properties.readProperty("test.mainUrl");
+        String username = properties.readProperty("test.authorisation.username");
+        String password = properties.readProperty("test.authorisation.password");
+        homePage = new HomePage(driver);
+        homePage.openMainUrl(url, username, password);
     }
 
     @AfterEach

@@ -5,10 +5,7 @@ import com.backbase.setup.api.models.profile.Profile;
 import com.backbase.setup.test.BaseAPITest;
 import com.backbase.setup.test.BaseTest;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
@@ -23,8 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CreateNewUserAPITest extends BaseAPITest {
 
     @Test
-    @Tag("API")
-    @Tag("ALL")
+    @Tags({@Tag("API"), @Tag("ALL")})
     @DisplayName("Test new user creation and check with profile")
     public void testCreateNewUser() throws IOException {
         Response response = registerUser(createNewRandomUser());

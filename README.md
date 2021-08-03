@@ -31,7 +31,8 @@ To run tests locally you need to update `src/test/resources/driver.properties` f
 * driver.platform=<b>local</b>
 * driver.browser=
 
-Browsers can be chosen between the ones mentioned above. 
+Browsers can be chosen between the ones mentioned above. Notice that added drivers are for Windows. If you run it on other OS make sure to use correct drivers 
+and change System Separators in `src/test/resources/driver.properties`.
 
 ### Headless
 
@@ -62,6 +63,12 @@ Selenium Grid url can point to external instance url or local instance created w
 To run all tests:
 ```
 mvn clean test -Dsuite=ALL
+```
+
+OR
+
+```
+mvn clean test
 ```
 
 To run ui tests:
